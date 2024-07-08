@@ -12,6 +12,11 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/customer")
 public class CustomerController {
 
+    private CustomerService customerService ;
+    CustomerController(CustomerService customerService){
+        this.customerService = customerService;
+    }
+
     @PostMapping
     public ResponseEntity<String> createCustomer(
             @RequestBody @Valid CustomerRequest request
