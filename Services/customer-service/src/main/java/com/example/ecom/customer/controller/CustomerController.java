@@ -20,7 +20,9 @@ public class CustomerController {
     @PostMapping
     public ResponseEntity<String> createCustomer(
             @RequestBody @Valid CustomerRequest request
-    ){
+    )
+    {
+        customerService.createCustomer(request);
         return ResponseEntity.ok("created");
     }
 }

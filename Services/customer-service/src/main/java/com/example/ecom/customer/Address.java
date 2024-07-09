@@ -1,15 +1,14 @@
 package com.example.ecom.customer;
 
 import jakarta.validation.Valid;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-import lombok.RequiredArgsConstructor;
+import lombok.*;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.validation.annotation.Validated;
 
 @Data
+@Builder
 @RequiredArgsConstructor
-@NoArgsConstructor
+@AllArgsConstructor
 @Validated
 public class Address {
     private String street;
